@@ -12,7 +12,7 @@ import com.servicios.egg.entidades.Usuario;
 
 @Controller
 @RequestMapping("/admin")
-class UsuarioControlador {
+public class AdminControlador {
 
     private UsuarioServicio usuarioServicio;
 
