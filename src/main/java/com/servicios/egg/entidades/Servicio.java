@@ -11,7 +11,7 @@ import lombok.Data;
 public class Servicio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String nombre;
 

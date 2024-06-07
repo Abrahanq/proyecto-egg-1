@@ -1,22 +1,27 @@
 package com.servicios.egg.entidades;
 
-import org.hibernate.annotations.GenericGenerator;
+
 
 import com.servicios.egg.enums.Rol;
-
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.Data;
+
+import lombok.*;
+
+
+
 
 @Entity
 @Data
+@AllArgsConstructor
+@Setter
+@Getter
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String nombre;
 
@@ -25,4 +30,9 @@ public class Usuario {
     private String password;
 
     private boolean alta;
+
+    public Usuario() {
+    }
+
+
 }

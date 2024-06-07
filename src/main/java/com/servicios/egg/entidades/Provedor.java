@@ -17,7 +17,7 @@ import lombok.Data;
 public class Provedor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private boolean alta;
 

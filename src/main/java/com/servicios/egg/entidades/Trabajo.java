@@ -13,7 +13,7 @@ import lombok.Data;
 public class Trabajo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String descripcion;
 
