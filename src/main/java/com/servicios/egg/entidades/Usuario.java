@@ -32,8 +32,4 @@ public class Usuario {
 
     private boolean alta;
 
-    public Usuario() {
-    }
-
-
 }
