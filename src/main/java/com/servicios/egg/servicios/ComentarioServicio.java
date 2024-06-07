@@ -13,13 +13,12 @@ import com.servicios.egg.repositorios.ComentarioRepositorio;
 
 
 @Service
-public class ServicioComentario {
+public class ComentarioServicio {
 
     @Autowired
     private ComentarioRepositorio comentarioRepositorio;
 
     
-   
 @Transactional
 public void crearcomentario(String comentario, int calificacion, boolean alta) {
         
