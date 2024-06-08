@@ -1,7 +1,7 @@
 package com.servicios.egg.controladores;
 
 import java.util.List;
-//algo 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
