@@ -10,12 +10,12 @@ import org.springframework.transaction.annotation.Transactional;
 import com.servicios.egg.entidades.Comentario;
 import com.servicios.egg.repositorios.ComentarioRepositorio;
 
-
 @Service
 public class ComentarioServicio {
 
     @Autowired
     private ComentarioRepositorio comentarioRepositorio;
+
 
     @Transactional
     public void crearcComentario( String comentario, boolean alta ) {
