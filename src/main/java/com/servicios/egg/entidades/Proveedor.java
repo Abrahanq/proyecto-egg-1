@@ -10,11 +10,19 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-@Data
 @Entity
-public class Provedor {
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class Proveedor{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

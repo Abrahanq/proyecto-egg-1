@@ -30,7 +30,7 @@ public class AdminControlador {
     }
 
     @GetMapping("/modificarRol/{id}")
-    public String cambiarRol(@PathVariable Long id) {
+    public String cambiarRolUsuario(@PathVariable Long id) {
         usuarioServicio.cambiarRol(id);
         return "redirect:/admin/usuarios";
     }

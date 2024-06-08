@@ -12,8 +12,6 @@ import lombok.Setter;
 import jakarta.persistence.Entity;
 
 
-
-
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor

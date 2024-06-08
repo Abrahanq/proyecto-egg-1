@@ -18,6 +18,11 @@ public class ComentarioControlador {
 
     private ComentarioServicio comentarioServicio;
 
+    @GetMapping("/registrar")
+    public String registrar() {
+        return "index"; // aca deberia ir "comentario_form"
+    }
+
     @GetMapping("/lista")
     public String listar(ModelMap modelo) {
         List<Comentario> comentarios = comentarioServicio.listarComentario();

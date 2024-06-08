@@ -33,6 +33,6 @@ public class Trabajo {
     private Usuario usuario_id;
 
     @OneToOne
-    private Provedor provedor_id;
+    private Proveedor provedor_id;
 
 }
