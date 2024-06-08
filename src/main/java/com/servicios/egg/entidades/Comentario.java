@@ -25,11 +25,6 @@ public class Comentario {
 
     private String comentario;
 
-    private int calificacion;
-
     private boolean alta;
-
-    @OneToOne
-    private Trabajo trabajo_id;
 
 }

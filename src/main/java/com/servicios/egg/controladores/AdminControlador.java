@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.servicios.egg.entidades.Usuario;
+import com.servicios.egg.enums.Rol;
+import com.servicios.egg.servicios.UsuarioServicio;
 
 @Controller
 @RequestMapping("/admin")

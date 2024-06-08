@@ -32,7 +32,7 @@ public class Proveedor{
     @ManyToOne
     private Usuario usuario_id;
 
-    @ManyToMany @JoinTable(name ="servicios_has_provedores", 
+    @ManyToMany @JoinTable(name ="servicios_has_provedores",
     joinColumns = @JoinColumn(referencedColumnName = "id"),
     inverseJoinColumns = @JoinColumn(referencedColumnName = "id"))
     private List<Servicio> Servicio;

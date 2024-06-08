@@ -1,5 +1,6 @@
 package com.servicios.egg.entidades;
 
+import com.servicios.egg.enums.Estado;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -29,8 +30,14 @@ public class Trabajo {
 
     private boolean alta;
 
+    private Estado estado;
+
+    private int calificacion;
+
+    private Comentario comentario;
+
     @ManyToOne
-    private Usuario usuario_id;
+    private Usuario usuario;
 
     @OneToOne
     private Proveedor provedor_id;
