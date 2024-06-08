@@ -57,16 +57,12 @@ public class UsuarioServicio {
    }
 
    @Transactional
-   public void cambiarRolUsuario(Long id){
-      Optional<Usuario> respuesta = usuarioRepositorio.findById(id);
+   public  void cambiarRolUsuario(Long id, Rol rol){
+      Optional<Usuario> respuestaUsuario = usuarioRepositorio.findById(id);
 
-      if(respuesta.isPresent()){
-         Usuario usuario = respuesta.get();
-         if(usuario.getRol().equals(Rol.USER)){
-            usuario.setRol(Rol.PROV);
-         }else if  (usuario.getRol().equals(Rol.PROV)){
-            usuario.setRol(Rol.USER);
-         }
+      if(respuestaUsuario.isPresent()){
+         Usuario usuario = respuestaUsuario.get();
+         usuario.setRol(rol);
       }
    }
 

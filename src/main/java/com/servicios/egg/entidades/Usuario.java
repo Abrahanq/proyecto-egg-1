@@ -14,7 +14,7 @@ import lombok.Setter;
 @Entity
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
+
 @Setter
 @Getter
 public class Usuario {
@@ -23,10 +23,15 @@ public class Usuario {
     private Long id;
 
     private String nombre;
+    private String phone;
 
-    private Rol rol;
+    @Column(unique = true)
+    private String email;
 
     private String password;
+
+    @Enumerated(EnumType.STRING)
+    private Rol rol;
 
     private boolean alta;
 
