@@ -1,17 +1,9 @@
 package com.servicios.egg.entidades;
 
-
-
 import com.servicios.egg.enums.Rol;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import lombok.*;
-
-
-
 
 @Entity
 @Data
@@ -24,15 +16,19 @@ public class Usuario {
     private Long id;
 
     private String nombre;
+    private String phone;
 
-    private Rol rol;
+    @Column(unique = true)
+    private String email;
 
     private String password;
+
+    @Enumerated(EnumType.STRING)
+    private Rol rol;
 
     private boolean alta;
 
     public Usuario() {
+
     }
-
-
 }

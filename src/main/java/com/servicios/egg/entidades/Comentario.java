@@ -1,17 +1,7 @@
 package com.servicios.egg.entidades;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import jakarta.persistence.Entity;
-
-
+import jakarta.persistence.*;
+import lombok.*;
 
 
 @Entity
@@ -27,11 +17,6 @@ public class Comentario {
 
     private String comentario;
 
-    private int calificacion;
-
     private boolean alta;
-
-    @OneToOne
-    private Trabajo trabajo_id;
 
 }
