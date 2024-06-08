@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.servicios.egg.entidades.Usuario;
+import com.servicios.egg.enums.Rol;
+import com.servicios.egg.servicios.UsuarioServicio;
 
 @Controller
 @RequestMapping("/admin")
@@ -35,8 +37,7 @@ class UsuarioControlador {
     }
 
     @GetMapping("/modificarRol/{id}")
-    public String cambiarRol(@PathVariable Long id) {
-        usuarioServicio.cambiarRol(id);
-        return "redirect:/admin/usuarios";
-    }
+     public String cambiarRol(@PathVariable Long id, Rol rol){ 
+        usuarioServicio.cambiarRolUsuario(id, rol); 
+        return "redirect:/admin/usuarios"; }
 }
